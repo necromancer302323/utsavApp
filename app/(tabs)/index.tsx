@@ -88,7 +88,7 @@ export default function Events() {
               }}>
                 <Ionicons
                 onPress={()=>{
-                  console.log("hlo")
+                  console.log("menu")
                 }}
                   name={"reorder-three-outline"}
                   size={25}
@@ -98,7 +98,7 @@ export default function Events() {
                   }}/>
                   <Ionicons
                 onPress={()=>{
-                  console.log("hlo")
+                  console.log("seacrh bar")
                 }}
                   name={"search"}
                   size={25}
