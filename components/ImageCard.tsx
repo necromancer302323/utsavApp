@@ -28,11 +28,11 @@ export default function ImageCard ({Events}:{
         }
       }, [SelectedEvent, readyToNavigate]);
 
-    return <Pressable >
+    return <Pressable>
          <Link href={"/(noBottomBar)/EventDetail"} onPress={(event:any)=>{
                 handleLinkPress(event); 
          }} >
-        <View style={{backgroundColor:"#454545",padding:10,borderRadius:20}}>
+        <View style={{backgroundColor:"#C0C0C0",padding:10,borderRadius:20,width:"100%"}}>
         <Image source={{uri: Events.url}} style={styles.image}/>
         <View style={{display:"flex",flexDirection:"row", width:"100%",justifyContent:"space-between"}}>
         <ThemedText style={styles.label}>{Events.name}</ThemedText>
@@ -55,8 +55,8 @@ export  function FullImageCard({Events}:{
    <ThemedText style={styles.FullImageLabel}>{Events.time}</ThemedText>
    </View>
    <ThemedText style={styles.FullImageLabel}>{Events.location}</ThemedText>
-   <ThemedText style={{fontSize:25,padding:10}}>Details</ThemedText>
-   <ThemedText style={styles.Details}>
+   <ThemedText style={{fontSize:25,padding:10,color:"black"}}>Details</ThemedText>
+   <ThemedText  style={styles.Details}>
     {Events.details}
    </ThemedText>
 </ScrollView >
@@ -64,13 +64,12 @@ export  function FullImageCard({Events}:{
 const styles= StyleSheet.create({
     image:{
         height:150,
-        borderRadius:20,
-        width:"100%"
+        borderRadius:20
     },
     label:{
-        color:"#43A6C6",
         fontSize:20,
-        marginTop:10
+        marginTop:10,
+        color:"black"
     },
     fullImage:{
         height:250,
@@ -81,10 +80,12 @@ const styles= StyleSheet.create({
        fontSize:25,
        marginTop:20,
        height:"100%",
-       textAlign:"center"
+       textAlign:"center",
+       color:"black"
     },
     FullImageLabel:{
         fontSize:20,
-        marginTop:10
+        marginTop:10,
+        color:"black"
     }
 })

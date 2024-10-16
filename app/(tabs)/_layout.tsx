@@ -7,13 +7,11 @@ export default function TabLayout() {
   const theme = useColorScheme()??"dark";
 
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors[theme].tint, headerShown: false, tabBarStyle: {
-      backgroundColor:"black"
-    }}}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors[theme].tint, headerShown: false}}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Explore',
+          title: 'Events',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="table" color={color} />,
         }}
       /> 
