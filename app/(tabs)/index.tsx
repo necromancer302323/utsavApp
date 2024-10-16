@@ -1,12 +1,8 @@
 import {
-  StyleSheet,
   Dimensions,
   Text,
   View,
   Image,
-  Pressable,
-  TextInput,
-  Button,
 } from "react-native";
 import { useState } from "react";
 import Animated, {
@@ -16,12 +12,8 @@ import Animated, {
 import { SplitView } from "@/components/SplitView";
 import { useCarousel } from "@/hooks/useCarousel";
 import { useEvents } from "@/hooks/useEvents";
-import { ThemedSafeAreaView } from "@/components/ThemedSafeAreaView";
 import Carousel from "react-native-reanimated-carousel";
 import { LinearGradient } from "expo-linear-gradient";
-import { Ionicons } from "@expo/vector-icons";
-import { ThemedText } from "@/components/ThemedText";
-
 
 const TOPBAR_HEIGHT = 250;
 
@@ -55,7 +47,7 @@ export default function Events() {
   });
 
   return (
-    <ThemedSafeAreaView style={{ flex: 1 }}>
+    <View>
       <Animated.View
         style={[
           { height: Math.max(0, TOPBAR_HEIGHT - yOffset) },
@@ -80,34 +72,16 @@ export default function Events() {
                   style={{ height: TOPBAR_HEIGHT }}
                 />
               </View>
-              <View style={{
-                width:"100%",
-                flexDirection:"row",
-                justifyContent:"space-between",
-                position:"absolute", borderRadius:20
-              }}>
-                <Ionicons
-                onPress={()=>{
-                  console.log("menu")
+              <View
+                style={{
+                  width: "100%",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  position: "absolute",
+                  borderRadius: 20,
                 }}
-                  name={"reorder-three-outline"}
-                  size={25}
-                  style={{
-                    color: "white",
-                    padding:5
-                  }}/>
-                  <Ionicons
-                onPress={()=>{
-                  console.log("seacrh bar")
-                }}
-                  name={"search"}
-                  size={25}
-                  style={{
-                    color: "white",
-                    padding:5
-                  }}/>
-              </View>
-                
+              ></View>
+
               <LinearGradient
                 colors={["transparent", "black"]}
                 style={{
@@ -145,6 +119,6 @@ export default function Events() {
         }}
         Events={Events}
       />
-    </ThemedSafeAreaView>
+    </View>
   );
 }

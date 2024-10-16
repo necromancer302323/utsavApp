@@ -1,20 +1,32 @@
-import { Colors } from '@/constants/Colors';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Tabs } from 'expo-router';
-import { useColorScheme } from 'react-native';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Drawer } from "expo-router/drawer";
+import { Ionicons } from "@expo/vector-icons";
 
-export default function TabLayout() {
-  const theme = useColorScheme()??"dark";
-
+export default function Layout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors[theme].tint, headerShown: false}}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Events',
-          tabBarIcon: ({ color }) => <FontAwesome size={28} name="table" color={color} />,
-        }}
-      /> 
-    </Tabs>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Drawer>
+        <Drawer.Screen
+          name="index" 
+          options={{
+            drawerLabel: "Home",
+            headerTitle: "",
+            headerRight: () => (
+              <Ionicons
+                onPress={() => {
+                  console.log("menu");
+                }}
+                name={"search"}
+                size={25}
+                style={{
+                  color: "#007aff",
+                  paddingRight: 15,
+                }}
+              />
+            ),
+          }}
+        />
+      </Drawer>
+    </GestureHandlerRootView>
   );
 }

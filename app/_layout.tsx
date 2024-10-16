@@ -2,8 +2,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import {  Slot, Stack } from "expo-router"
 import {  GestureHandlerRootView } from "react-native-gesture-handler"
 import { RecoilRoot } from "recoil"
-import { Drawer } from 'expo-router/drawer';
-import { DrawerRouter, NavigationContainer } from "@react-navigation/native";
+
 
 export default function Layout(){
     return<RecoilRoot>
@@ -11,7 +10,7 @@ export default function Layout(){
     <Stack screenOptions={{
             headerShown:false,
         }}>
-       <Stack.Screen name="(noBottomBar)/EventDetail" 
+       <Stack.Screen name="(noMenu)/EventDetail" 
          options={{headerShown:true,
             headerTitle:"Event",
             headerBackTitle:"Go Back"

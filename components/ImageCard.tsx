@@ -29,7 +29,7 @@ export default function ImageCard ({Events}:{
       }, [SelectedEvent, readyToNavigate]);
 
     return <Pressable>
-         <Link href={"/(noBottomBar)/EventDetail"} onPress={(event:any)=>{
+         <Link href={"/(noMenu)/EventDetail"} onPress={(event:any)=>{
                 handleLinkPress(event); 
          }} >
         <View style={{backgroundColor:"#C0C0C0",padding:10,borderRadius:20,width:"100%"}}>
