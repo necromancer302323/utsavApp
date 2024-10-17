@@ -14,7 +14,67 @@ export default function Layout() {
             headerRight: () => (
               <Ionicons
                 onPress={() => {
-                  console.log("menu");
+                  console.log("Search bar");
+                }}
+                name={"search"}
+                size={25}
+                style={{
+                  color: "#007aff",
+                  paddingRight: 15,
+                }}
+              />
+            ),
+          }}
+        />
+         <Drawer.Screen
+          name="day1Events" 
+          options={{
+            drawerLabel: "Day 1",
+            headerTitle: "Day 1",
+            headerRight: () => (
+              <Ionicons
+                onPress={() => {
+                  console.log("Search bar");
+                }}
+                name={"search"}
+                size={25}
+                style={{
+                  color: "#007aff",
+                  paddingRight: 15,
+                }}
+              />
+            ),
+          }}
+        />
+         <Drawer.Screen
+          name="day2Events" 
+          options={{
+            drawerLabel: "Day 2",
+            headerTitle: "Day 2",
+            headerRight: () => (
+              <Ionicons
+                onPress={() => {
+                  console.log("Search bar");
+                }}
+                name={"search"}
+                size={25}
+                style={{
+                  color: "#007aff",
+                  paddingRight: 15,
+                }}
+              />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="day3Events" 
+          options={{
+            drawerLabel: "Day 3",
+            headerTitle: "Day 3",
+            headerRight: () => (
+              <Ionicons
+                onPress={() => {
+                  console.log("Search bar");
                 }}
                 name={"search"}
                 size={25}
